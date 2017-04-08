@@ -26,11 +26,10 @@
                     {% for entry in entries %}
                     {% if entry.title == title %}
                     <article>
-                        <h1>{{entry.title}}</h1>
-                        <time datetime="{{ entry.date }}">{{ entry.date }}</time>
+                        <h1>Title: {{entry.title}}</h1>
+                        <time datetime="{{ entry.date }}">Date: {{ entry.date }}</time>
                         <div class="entry">
-                            <h3>Time Spent: </h3>
-                            <p> {{ entry.timeSpent }} </p>
+                            <p>Time Spent: {{ entry.timeSpent }} </p>
                         </div>
                         <div class="entry">
                             <h3>What I Learned:</h3>
