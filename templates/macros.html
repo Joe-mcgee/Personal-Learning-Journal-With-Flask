@@ -1,0 +1,42 @@
+{% macro render_field(field) %}
+{% if field.errors %}
+<div class="u-full-width field-errors">
+  <ul>
+    {% for error in field.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{{ field.label }}
+{{ field(class="u-full-width") }}
+{% endmacro %}
+
+
+{% macro render_date_field(field) %}
+{% if field.errors %}
+<div class="u-full-width field-errors">
+  <ul>
+    {% for error in field.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{{ field.label }}
+{{ field(class="u-full-width", type='date') }}
+{% endmacro %}
+
+{% macro render_text_field(field) %}
+{% if field.errors %}
+<div class="u-full-width field-errors">
+  <ul>
+    {% for error in field.errors %}
+    <li>{{ error }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+{{ field.label }}
+{{ field(class="u-full-width", rows="5") }}
+{% endmacro %}
