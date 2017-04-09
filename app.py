@@ -31,6 +31,7 @@ def index():
     entries = models.Entry.select()
     return render_template('index.html', index=index, entries=entries)
 
+
 @app.route('/detail_<title>')
 def detail(title):
     entries = models.Entry.select()
